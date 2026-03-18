@@ -1,1 +1,160 @@
-<html><head><title>Tiny Giant Game Studio</title></head><body><h1>Tiny Giant Game Studio</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Giant Game Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f7b731, #fc5c65, #a55eea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #888;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .games {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        .games h2 {
+            font-size: 1.4rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .game-card {
+            background: #14142a;
+            border: 1px solid #2a2a4a;
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            transition: border-color 0.3s;
+        }
+
+        .game-card:hover {
+            border-color: #f7b731;
+        }
+
+        .game-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #f7b731, #fc5c65);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .game-info h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .game-info p {
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a1a3a;
+            border: 1px solid #2a2a4a;
+            color: #aaa;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: auto;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .game-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tiny Giant Game Studio</h1>
+        <p>Small studio, big games. Crafting fun mobile experiences from South Africa.</p>
+    </header>
+
+    <section class="games">
+        <h2>Our Games</h2>
+        <div class="game-card">
+            <div class="game-icon">&#127942;</div>
+            <div class="game-info">
+                <h3>Stonelympics</h3>
+                <p>An Olympic-themed mini-game collection featuring 6 stone-age sporting events. Dash, hurl javelins, throw stones, leap for distance, clear hurdles, and shoot your bow to set records and climb the leaderboards.</p>
+                <span class="badge">Android</span>
+                <span class="badge">6 Events</span>
+                <span class="badge">Leaderboards</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tiny Giant Game Studio</p>
+    </footer>
+</body>
+</html>
