@@ -77,13 +77,15 @@
         .game-icon {
             width: 90px;
             height: 90px;
-            background: linear-gradient(135deg, #f7b731, #fc5c65);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .game-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .game-info h3 {
@@ -107,6 +109,39 @@
             border-radius: 20px;
             font-size: 0.85rem;
             margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .play-store-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #f7b731, #fc5c65);
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: opacity 0.3s, transform 0.2s;
+        }
+
+        .play-store-link:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .play-store-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        .game-links {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         footer {
@@ -131,6 +166,16 @@
                 text-align: center;
                 padding: 24px;
             }
+
+            .game-links {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .game-info div[style] {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -143,15 +188,19 @@
     <section class="games">
         <h2>Our Games</h2>
         <div class="game-card">
-            <div class="game-icon">&#127942;</div>
+            <div class="game-icon"><img src="stonelympics/stonelympics-icon.jpg" alt="Stonelympics icon"></div>
             <div class="game-info">
                 <h3>Stonelympics</h3>
                 <p>An Olympic-themed mini-game collection featuring 6 stone-age sporting events. Dash, hurl javelins, throw stones, leap for distance, clear hurdles, and shoot your bow to set records and climb the leaderboards.</p>
                 <span class="badge">Android</span>
                 <span class="badge">6 Events</span>
                 <span class="badge">Leaderboards</span>
-                <div style="margin-top: 12px; text-align: right;">
-                    <a href="/stonelympics/privacy-policy.html" style="color: #666; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
+                <div class="game-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.TinyGiant.Stonelympics" target="_blank" rel="noopener" class="play-store-link">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4l2.834 1.639a1 1 0 0 1 0 1.74l-2.834 1.057-2.532-2.532 2.532-1.904zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"/></svg>
+                        Get it on Google Play
+                    </a>
+                    <a href="stonelympics/privacy-policy.html" style="color: #666; font-size: 0.85rem; text-decoration: none;">Privacy Policy</a>
                 </div>
             </div>
         </div>
